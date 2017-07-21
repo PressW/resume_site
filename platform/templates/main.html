@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Preston Wipf</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">-->
+	
+	<style>
+		@font-face {
+			font-family: 'moonhouse';
+			<!--src: {{url_for('static', filename='moonhouse.ttf')}} format('truetype');-->
+			src: local('../static/moonhouse.ttf') format('truetype');
+			}
+	
+		#home-page{
+			height:100vh;
+			background: black; /* For browsers that do not support gradients */    
+			background: -webkit-linear-gradient(left top, black, 	#0A1E1E); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(bottom right, black, 	#0A1E1E); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(bottom right, black, 	#0A1E1E); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to bottom right, black, 	#0A1E1E); /* Standard syntax (must be last) */
+		}
+		
+		body{
+			font-family: 'moonhouse', sans-serif;
+			color: white;
+			font-size: 500%;
+			text-align: center;
+		}
+	</style>
+	
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+</html>
+
+
+
+<body id="home-page"> 
+</br></br></br></br>
+<p>BabyRage</p>
+</body>
