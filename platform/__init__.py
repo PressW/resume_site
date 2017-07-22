@@ -6,6 +6,10 @@ app = Flask(__name__)
 def homepage():
     return render_template("main.html")
 
+@app.route('/interests')
+def interests():
+    return render_template("interests.html")
+
 
 if __name__ == "__main__":
     app.run()
