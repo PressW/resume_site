@@ -27,7 +27,7 @@ body{
 }
 
 table {
-	width: 75%;
+	width: 85%;
 	border-collapse: collapse;
 	margin:50px auto;
 	}
@@ -38,16 +38,16 @@ th {
 	font-weight: bold;
 	}
 
+td.title {
+  font-style: italic;
+}
+
 td, th {
 	padding: 10px;
 	border: 1px solid #ccc;
 	text-align: left;
 	font-size: 18px;
 	}
-
-td.title {
-  font-style: italic;
-}
 
 .labels tr td {
 	background-color: #1e9f9c;
@@ -59,7 +59,12 @@ td.title {
 	display: block;
 }
 
+.hide {
+  display: none;
+}
 
-[data-toggle="toggle"] {
-	display: none;
+.ital {
+  font-style: italic;
+  font-size: 75%;
+  text-align: center;
 }

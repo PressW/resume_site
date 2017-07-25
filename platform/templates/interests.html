@@ -6,13 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="{{ url_for('static', filename='interests.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
-    $(document).ready(function() {
-        $('[data-toggle="toggle"]').change(function(){
-            $(this).parents().next('.hide').toggle();
-        });
-    });
+		$(document).ready(function() {
+			$("table").find(".toggle").on("click", function(){
+			    var test = $(this).closest('tbody').next('tbody');
+			    //alert("test");
+			    test.toggle();
+			});
+		});
     </script>
 </head>
 </html>
@@ -32,160 +34,157 @@
   			<th>Info</th>
   		</tr>
   	</thead>
-  	<tbody>
-  		<tbody class="labels">
-  			<tr>
-  				<td colspan="5">
-  					<label for="books">Books</label>
-  					<input type="checkbox" name="books" id="books" data-toggle="toggle">
-  				</td>
-  			</tr>
-  		</tbody>
-  		<tbody class="hide">
-  			<tr>
-  				<td class="title">Darth Plagueis</td>
-  				<td>James Luceno</td>
-  				<td>Science Fiction</td>
-  				<td>5 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">Tarkin</td>
-  				<td>James Luceno</td>
-  				<td>Science Fiction</td>
-  				<td>5 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">Path of Destruction</td>
-  				<td>Drew Karpyshyn</td>
-  				<td>Science Fiction</td>
-  				<td>5 out of 5</td>
-  				<td>Bane Trilogy</td>
-  			</tr>
-        <tr>
-  				<td class="title">Rule of Two</td>
-  				<td>Drew Karpyshyn</td>
-  				<td>Science Fiction</td>
-  				<td>5 out of 5</td>
-  				<td>Bane Trilogy</td>
-  			</tr>
-        <tr>
-  				<td class="title">Dynasty of Evil</td>
-  				<td>Drew Karpyshyn</td>
-  				<td>Science Fiction</td>
-  				<td>5 out of 5</td>
-  				<td>Bane Trilogy</td>
-  			</tr>
-        <tr>
-  				<td class="title">Deceived</td>
-  				<td>Paul S. Kemp</td>
-  				<td>Science Fiction</td>
-  				<td>4 out of 5</td>
-  				<td>The Old Republic</td>
-  			</tr><tr>
-  				<td class="title">Revan</td>
-  				<td>Drew Karpyshyn</td>
-  				<td>Science Fiction</td>
-  				<td>4 out of 5</td>
-  				<td>The Old Republic</td>
-  			</tr>
-        <tr>
-  				<td class="title">Annihilation</td>
-  				<td>Drew Karpyshyn</td>
-  				<td>Science Fiction</td>
-  				<td>4 out of 5</td>
-  				<td>The Old Republic</td>
-  			</tr>
-  			<tr>
-  				<td class="title">Heir to the Empire</td>
-  				<td>Timothy Zahn</td>
-  				<td>Science Fiction</td>
-  				<td>4 out of 5</td>
-  				<td>Thrawn Trilogy</td>
-  			</tr>
-        <tr>
-  				<td class="title">Dark Force Rising</td>
-  				<td>Timothy Zahn</td>
-  				<td>Science Fiction</td>
-  				<td>4 out of 5</td>
-  				<td>Thrawn Trilogy</td>
-  			</tr>
-        <tr>
-  				<td class="title">2nd Machine Age</td>
-  				<td>Eric Brynjolfsson &amp; Andrew McAfee</td>
-  				<td>Artificial Intelligence; Economics</td>
-  				<td>4 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">Best Software Writing I</td>
-  				<td>Joel Spolsky</td>
-  				<td>Software Engineering</td>
-  				<td>4 out of 5</td>
-  				<td></td>
-  			</tr>
-  		</tbody>
-  		<tbody class="labels">
-  			<tr>
-  				<td colspan="5">
-  					<label for="podcasts">Podcasts</label>
-  					<input type="checkbox" name="podcasts" id="podcasts" data-toggle="toggle">
-  				</td>
-  			</tr>
-  		</tbody>
-  		<tbody class="hide">
-  			<tr>
-  				<td class="title">Exponent</td>
-  				<td>Ben Thompson &amp; James Allsworth</td>
-  				<td>Economics</td>
-  				<td>5 out of 5</td>
-  				<td></td>
-  			</tr>
-  			<tr>
-  				<td class="title">The Ezra Klein Show</td>
-  				<td>Ezra Klein</td>
-  				<td>Politics</td>
-  				<td>4 out of 5</td>
-  				<td></td>
-  			</tr>
-  			<tr>
-  				<td class="title">EconTalk</td>
-  				<td>Russ Roberts</td>
-  				<td>Economics; Finance</td>
-  				<td>3 out of 5</td>
-  				<td></td>
-  			</tr>
-  			<tr>
-  				<td class="title">Freakonomics</td>
-  				<td>Stephen J. Dubner</td>
-  				<td>Economics</td>
-  				<td>4 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">Accidental Tech Podcast</td>
-  				<td>Marco Arment, Casey Liss, John Siracusa</td>
-  				<td>Technology</td>
-  				<td>4 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">The Tim Ferris Show</td>
-  				<td>Tim Ferris</td>
-  				<td>Self Improvement</td>
-  				<td>3 out of 5</td>
-  				<td></td>
-  			</tr>
-        <tr>
-  				<td class="title">Planet Money</td>
-  				<td>NPR</td>
-  				<td>Economics; Finance</td>
-  				<td>3 out of 5</td>
-  				<td></td>
-  			</tr>
-  		</tbody>
-  	</tbody>
+	<tbody class="labels">
+		<tr>
+			<!--<td class="toggle" name="toggle_color" colspan="5" onclick='alert("test")'>-->
+			<td class="toggle" name="toggle_books" colspan="5">
+				<label>Books &nbsp;<span class="ital">( Click to expand )</span></label>
+			</td>
+		</tr>
+	</tbody>
+	<tbody class="hide">
+		<tr>
+			<td class="title">Darth Plagueis</td>
+			<td>James Luceno</td>
+			<td>Science Fiction</td>
+			<td>5 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Tarkin</td>
+			<td>James Luceno</td>
+			<td>Science Fiction</td>
+			<td>5 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Path of Destruction</td>
+			<td>Drew Karpyshyn</td>
+			<td>Science Fiction</td>
+			<td>5 out of 5</td>
+			<td>Bane Trilogy</td>
+		</tr>
+		<tr>
+			<td class="title">Rule of Two</td>
+			<td>Drew Karpyshyn</td>
+			<td>Science Fiction</td>
+			<td>5 out of 5</td>
+			<td>Bane Trilogy</td>
+		</tr>
+		<tr>
+			<td class="title">Dynasty of Evil</td>
+			<td>Drew Karpyshyn</td>
+			<td>Science Fiction</td>
+			<td>5 out of 5</td>
+			<td>Bane Trilogy</td>
+		</tr>
+		<tr>
+			<td class="title">Deceived</td>
+			<td>Paul S. Kemp</td>
+			<td>Science Fiction</td>
+			<td>4 out of 5</td>
+			<td>The Old Republic</td>
+		</tr><tr>
+			<td class="title">Revan</td>
+			<td>Drew Karpyshyn</td>
+			<td>Science Fiction</td>
+			<td>4 out of 5</td>
+			<td>The Old Republic</td>
+		</tr>
+		<tr>
+			<td class="title">Annihilation</td>
+			<td>Drew Karpyshyn</td>
+			<td>Science Fiction</td>
+			<td>4 out of 5</td>
+			<td>The Old Republic</td>
+		</tr>
+		<tr>
+			<td class="title">Heir to the Empire</td>
+			<td>Timothy Zahn</td>
+			<td>Science Fiction</td>
+			<td>4 out of 5</td>
+			<td>Thrawn Trilogy</td>
+		</tr>
+		<tr>
+			<td class="title">Dark Force Rising</td>
+			<td>Timothy Zahn</td>
+			<td>Science Fiction</td>
+			<td>4 out of 5</td>
+			<td>Thrawn Trilogy</td>
+		</tr>
+		<tr>
+			<td class="title">2nd Machine Age</td>
+			<td>Eric Brynjolfsson &amp; Andrew McAfee</td>
+			<td>Artificial Intelligence; Economics</td>
+			<td>4 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Best Software Writing I</td>
+			<td>Joel Spolsky</td>
+			<td>Software Engineering</td>
+			<td>4 out of 5</td>
+			<td></td>
+		</tr>
+	</tbody>
+	<tbody class="labels">
+		<tr>
+			<td class="toggle" name="toggle_podcasts" colspan="5">
+				<label>Podcasts &nbsp;<span class="ital">( Click to expand )</span></label>
+			</td>
+		</tr>
+	</tbody>
+	<tbody class="hide">
+		<tr>
+			<td class="title">Exponent</td>
+			<td>Ben Thompson &amp; James Allsworth</td>
+			<td>Economics</td>
+			<td>5 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">The Ezra Klein Show</td>
+			<td>Ezra Klein</td>
+			<td>Politics</td>
+			<td>4 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">EconTalk</td>
+			<td>Russ Roberts</td>
+			<td>Economics; Finance</td>
+			<td>3 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Freakonomics</td>
+			<td>Stephen J. Dubner</td>
+			<td>Economics</td>
+			<td>4 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Accidental Tech Podcast</td>
+			<td>Marco Arment, Casey Liss, John Siracusa</td>
+			<td>Technology</td>
+			<td>4 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">The Tim Ferris Show</td>
+			<td>Tim Ferris</td>
+			<td>Self Improvement</td>
+			<td>3 out of 5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="title">Planet Money</td>
+			<td>NPR</td>
+			<td>Economics; Finance</td>
+			<td>3 out of 5</td>
+			<td></td>
+		</tr>
+	</tbody>
   </table>
 
 </body>
